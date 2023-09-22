@@ -17,7 +17,7 @@ function App() {
     setPoints((prev) => [...prev, { y: clientY, x: clientX }]);
   };
 
-  const handleUndoDots = () => {
+  const handleUndoPoint = () => {
     if (!points.length) return;
 
     const lastPoint = [points[points.length - 1]];
@@ -26,7 +26,7 @@ function App() {
     setPoints(points.slice(0, points.length - 1));
   };
 
-  const handleRedoDots = () => {
+  const handleRedoPoint = () => {
     if (!cachedPoints.length) return;
 
     const lastCachedPoint = [cachedPoints[cachedPoints.length - 1]];
